@@ -2,5 +2,5 @@ frmCategory = 0, 0, 656, 424, C, 25, 25, 681, 449, C
 Category = 75, 75, 731, 499, C
 CategoryRepository = 100, 100, 756, 524, C
 DbConnection = 125, 125, 781, 549, C
-ModMain = 175, 175, 831, 599, C
-frmAddEditCategory = 150, 150, 806, 574, C, 125, 125, 781, 549, C
+frmAddEditCategory = 150, 150, 806, 574, Z, 125, 125, 781, 549, C
+ModPublic = 0, 0, 615, 423, C
