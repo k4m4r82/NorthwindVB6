@@ -11,9 +11,10 @@
 properties {        			
 	$vb6bin = "C:\Program Files (x86)\Microsoft Visual Studio\VB98\VB6.EXE"
 	
-	$src_dir = Split-Path $psake.build_script_file
-    $build_artifact_dir = "$src_dir\build_artifact"
-	$build_log_dir = "$src_dir\build_log"
+	$build_dir = Split-Path $psake.build_script_file        
+	$src_dir = "$build_dir\src"
+    $build_artifact_dir = "$build_dir\build_artifact"
+	$build_log_dir = "$build_dir\build_log"
 	
 	$project_name = "Northwind.vbp"
     $project = "$src_dir\$project_name"		        
@@ -86,6 +87,7 @@ Task CreateLogFile {
 		New-Item -Path $build_log_dir -ItemType Directory
 	}
 	
+	Write-host  ("Build dir : {0}" -f $build_dir)
 	Write-host  ("Src dir : {0}" -f $src_dir)
 	Write-host  ("Artifact dir : {0}" -f $build_artifact_dir)	
 	Write-host  ("Log dir : {0}" -f $logfile)
